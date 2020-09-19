@@ -1,2 +1,11 @@
-<span>{{task.title}}</span>
+<a [ngStyle]="{'color':getColor(task.title)}" style="color: black;"  [routerLink]="['/task', task.id, 'Pragyan']" [queryParams]="{'id': task.id, 'name':'pragyan'}">{{task.title}}</a>
 <button class="btn btn-danger btn-sm float-right" (click)="handleDelete()">X</button>
+<!--Example of NgClass directive-->
+<!--<div [ngClass]="{
+    'text-success':task.title === 'Task1',
+    'text-primary':task.title === 'Task2',
+    'text-danger':task.title === 'Task3',
+    'text-info':task.title === 'Task4',
+    'text-warning':task.title === 'Task5',
+    'small': 
+  }">{{task.title}}</div>-->

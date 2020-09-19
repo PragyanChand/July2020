@@ -1,0 +1,58 @@
+{
+
+  "task": [
+    {
+      "id": 1,
+      "title": "Task1",
+      "description": "Angular",
+      "complete" : false,
+      "date": "2029-12-12"
+    },
+    {
+      "id": 2,
+      "title": "Task2",
+      "description": "NodeJS",
+      "complete" : false,
+      "date": "2029-12-12"
+    },
+    {
+      "id": 3,
+      "title": "Task3",
+      "description": "ReactJs",
+      "complete" : false,
+      "date": "2029-12-12"
+    },
+    {
+      "id": 4,
+      "title": "Task4",
+      "description": "HTML5",
+      "complete" : false,
+      "date": "2029-12-12"
+    },
+    {
+      "id": 5,
+      "title": "Task5",
+      "description": "CSS3",
+      "complete" : false,
+      "date": "2029-12-12"
+    }
+     
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

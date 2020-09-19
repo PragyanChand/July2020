@@ -1,0 +1,19 @@
+<div class="card">
+     <div class="card-header">
+         <h3>{{task.title}}</h3>{{task.id | currency : 'USD': 'symbol':'3.0' }}
+        
+         
+     </div>
+     <div class="card-body">
+        <p>{{task.description | titlecase}}</p>
+        <p>
+            <a routerLink="/task">Back to Task Manager</a>
+        </p>
+        <p>{{task| json}}</p>
+        <p>{{task.date | date: 'fullDate'}}</p>
+        <p>{{task.date | date: 'shortDate'}}</p>
+        <p>{{task.date | date: 'h:mm a z'}}</p>
+        <p>Test --- {{task.date | dateFormat}}</p>
+        <p>{{(task.id + 0.02124324525 )|number: '1.1-4' }}</p>
+    </div>
+</div>

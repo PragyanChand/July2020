@@ -1,5 +1,32 @@
-<ul class="list-group">
-    <li class="list-group-item" *ngFor="let task of taskList">
-        <app-task-item [task] = task></app-task-item>
-    </li>
-</ul>
+<div *ngIf="!taskList.length; else taskPresent" >No Task to Show</div>
+   
+<ng-template #taskPresent>
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let task of taskList">
+            <app-task-item [task] = task></app-task-item>
+        </li>
+    </ul>
+    <!--Example of NgSwitch Directive-->
+    <div appCompletedTask *ngFor="let task of taskList" [ngSwitch]="task.title">
+        <div *ngSwitchCase="'Task1'"
+          class="blue">
+        {{ task.title }}
+      </div>
+      <div *ngSwitchCase="'Task2'"
+          class="red">
+        {{ task.title }}
+      </div>
+      <div *ngSwitchCase="'Task3'"
+          class="green">
+        {{ task.title }}
+      </div>
+      <div *ngSwitchCase="'Task4'"
+          class="yellow">
+        {{ task.title }}
+      </div>
+      <div *ngSwitchDefault
+          class="cyan">
+        {{ task.title }}
+      </div>
+    </div>
+</ng-template>

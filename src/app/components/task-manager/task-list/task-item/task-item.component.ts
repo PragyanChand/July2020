@@ -18,4 +18,18 @@ export class TaskItemComponent implements OnInit {
   handleDelete(){
     this.taskService.deleteTask(this.task.id);
   }
+  getColor(title) { 
+    switch (title) {
+      case 'Task1':
+        return 'green';
+      case 'Task2':
+        return 'blue';
+      case 'Task3':
+        return 'red';
+      case 'Task4':
+        return 'yellow';
+      case 'Task5':
+        return 'cyan';
+    }
+  }
 }
